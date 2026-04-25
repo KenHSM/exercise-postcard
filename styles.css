@@ -1,0 +1,112 @@
+/* Selector Universal (*) para reiniciar el modelo de caja */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+/* Selector de etiqueta */
+body {
+	background-color: #1a1a1a; /* Fondo oscuro exterior */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	font-family: "Patrick Hand", cursive; /* Aplicando la Google Font */
+}
+
+/* Selector de clase (.postcard) - Trabajando con cajas */
+.postcard {
+	background-color: white;
+	width: 600px;
+	padding: 30px; /* Padding interno */
+	margin: 20px; /* Margin externo */
+	border: 1px solid #ccc; /* Border */
+
+	/* Uso de Overflow: oculta cualquier contenido que intente salirse de la caja principal */
+	overflow: hidden;
+}
+
+/* Selectores de clase y descendentes */
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	margin-bottom: 20px;
+}
+
+.header h1 {
+	font-size: 38px;
+	font-weight: normal;
+	color: #111;
+}
+
+.logo {
+	width: 65px;
+	height: auto;
+}
+
+.body {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 40px;
+}
+
+.left-column {
+	width: 50%;
+	padding-right: 20px;
+}
+
+.left-column p {
+	font-size: 22px;
+	line-height: 1.1;
+	margin-bottom: 25px;
+	color: #222;
+}
+
+.right-column {
+	width: 45%;
+}
+
+.right-column form {
+	display: flex;
+	flex-direction: column;
+}
+
+/* Selectores de atributo para apuntar solo a inputs específicos */
+input[type="text"],
+input[type="email"] {
+	font-family: "Patrick Hand", cursive;
+	font-size: 20px;
+	border: none;
+	border-bottom: 1px solid #999; /* Solo mostramos la línea inferior */
+	margin-bottom: 25px;
+	padding-bottom: 5px;
+	outline: none;
+	color: #555;
+	background-color: transparent;
+}
+
+/* Pseudoelemento para cambiar el color del texto de relleno (placeholder) */
+input::placeholder {
+	color: #777;
+}
+
+.footer {
+	text-align: center;
+}
+
+.footer button {
+	font-family: "Patrick Hand", cursive;
+	font-size: 20px;
+	background-color: #cccccc;
+	border: 1px solid #999;
+	padding: 5px 15px;
+	cursor: pointer;
+	color: #222;
+}
+
+/* Selector de pseudo-clase (:hover) para interactividad */
+.footer button:hover {
+	background-color: #b3b3b3;
+}
